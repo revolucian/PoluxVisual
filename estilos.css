@@ -8,9 +8,11 @@
 }
 
 body{
+    width: 100%;
+    height: auto;
     display: grid;
-    gap: 0px;
-    grid-template-columns: 0.75fr repeat(3, 1fr);
+    grid-gap: 0px;
+    grid-template-columns: 350px repeat(3, 1fr);
     grid-template-rows: auto /*200px*/ 50px;
     grid-template-areas: "header main main main"
                          "header main main main"
@@ -35,6 +37,11 @@ header {
 }
 header img {
     margin: 20px;
+    /* width: 110% */
+}
+
+.fixed {
+    position: fixed
 }
 
 header nav ul li a {
@@ -65,9 +72,10 @@ main {
     grid-area: main;
     display: grid;
     width: 100%;
+    height: auto;
     grid-gap: 0px;
-    grid-template-columns:  repeat(3, 33.33%);
-    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 400px);
     grid-template-areas:"one one one"
                         "one one one"
                         "three five five "
@@ -80,54 +88,52 @@ main {
 
 .one {
     grid-area: one;
-    /* background-position: center;
+    background-image: url(imágenes/Polux\ -\ Estatua\ angel\ -\ Tropical.jpg);
     background-size: cover;
-    background-image: url("imágenes/Polux - Estatua angel - Tropical.jpg") */
+    background-repeat: no-repeat;
 }
 
 .two{
     grid-area: two;
-    /* background-image: url("/imágenes/Polux\ -\ Fondo\ plumas\ sin\ logo.jpg");
-    background-position: center;
-    background-size: cover; */
+    background-image: url(imágenes/Pegaso-sin\ logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .three{
     grid-area: three;
-    /* background-image: url("https://www.fillmurray.com/640/36");
-    background-position: center;
-    background-size: cover; */
+    background-image: url(imágenes/Polux\ -\ Fondo\ plumas\ sin\ logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .four{
-    grid-area: four;
-    /* background-image: url("https://www.fillmurray.com/640/360");
-    background-position: center;
-    background-size: cover; */
+    grid-area: four;   
+    background-image: url(imágenes/Polux\ -\ Fondo\ ocaso.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 .five{
     grid-area: five;
-    width: 800px;
-    height: 400px;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    background-image: url(imágenes/Q.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 #qimagen{
-    width: 800px;
-    height: 400px;
     position: absolute;
     display: block;
-    transition: all 1s ease-in-out;
+    transition: transform 0.4s;
 }
 
 .five:hover #qimagen{
-    left: -800px;
+    transform: translateX(-800px)
 }
 
 #quienes{
-    width: 800px;
     height: 400px;
     background: black;
     color: white;
@@ -152,65 +158,106 @@ main {
 
 .six{
     grid-area: six;
+    background-image: url(imágenes/Polux\ -\ Angeles\ de\ Manga.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 .seven {
     grid-area: seven;
+    background-image: url(imágenes/Polux\ -\ David\ &\ ElDorado_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 .eight {
     grid-area: eight;
+    background-image: url(imágenes/Kola\ Polux.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 .nine {
     grid-area: nine;
+    background-image: url(imágenes/Polux\ -\ Columnas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 .ten {
     grid-area: ten;
-    width: 800px;
-    height: 400px;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    background-image: url(imágenes/Contactanos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 #cimagen{
-    width: 800px;
-    height: 400px;
     position: absolute;
     display: block;
-    transition: all 1s ease-in-out;
+    transition: transform 0.4s;
 }
 
 .ten:hover #cimagen{
-    left: -800px;
+    transform: translateX(-800px)
 }
 
 #contacto{
-    width: 800px;
     height: 400px;
     background: black;
     color: white;
-    padding: 35px 50px 35px 50px;
+    padding: 100px;
 }
 
 .ten form {
     font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.25fr 2fr 1fr 1fr);
+    grid-gap: 15px;
+    grid-template-areas: "nombre email email"
+                         "mensaje mensaje texto"
+                         "mensaje mensaje texto"
+                         "mensaje mensaje enviar"
 }
 
 .ten .message {
-    width: 60%;
+    grid-area: mensaje;
+    height: 150px;
     flex-grow: 6;
 }
 
+.ten .casillero{
+    height: 25px;
+}
+
+.ten .nombre{
+    grid-area: nombre;
+}
+
+.ten. .email{
+    grid-area: email;
+}
+
+.ten .message {
+    text-align: start;
+}
+
 .ten p {
+    grid-area: texto;
     font-family: 'Courier New', Courier, monospace;
 }
 
+.ten .enviar {
+    text-transform: uppercase;
+}
+
+.ten .enviar:hover{
+    color: white;
+    background-color:red;
+    cursor: pointer;
+}
 
 /* aside{
     grid-area: aside;

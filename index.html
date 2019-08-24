@@ -8,10 +8,18 @@
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="imágenes/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imágenes/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imágenes/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
     <header>
+        <div class="fixed">
         <img src="imágenes/Polux logo.jpg" alt="pólux logo" class="logo">
         <nav class="menu">
             <ul>
@@ -33,19 +41,23 @@
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
     
-
     <main>
-        <img src="imágenes/Polux - Estatua angel - Tropical.jpg" alt="" class="one">
-        <img src="imágenes/Pegaso-sin logo.jpg" alt="" class="two">
-        <img src="imágenes/Polux - Fondo plumas sin logo.jpg" alt="" class="three">
-        <img src="imágenes/Polux - Fondo ocaso.jpg" alt="" class="four" >
-        <div class="two"></div>
-        <div class="three"></div>
-        <div class="four"></div>
-        
-        <div class="five">
+        <div class="grid-item one">
+            <!-- <img src="imágenes/Polux - Estatua angel - Tropical.jpg" alt=""> -->
+        </div>
+        <div class="grid-item two">
+            <!-- <img src="imágenes/Pegaso-sin logo.jpg" alt=""> -->
+        </div>
+        <div class="grid-item three">
+            <!-- <img src="imágenes/Polux - Fondo plumas sin logo.jpg" alt=""> -->
+        </div>
+        <div class="grid-item four">
+            <!-- <img src="imágenes/Polux - Fondo ocaso.jpg" alt=""> -->
+        </div>
+        <div class="grid-item five">
             <img src="imágenes/Q.jpg" alt="Quienes somos" id="qimagen">
             <div id="quienes"> 
             <!-- <h1>¿QUIÉNES SOMOS?</h1>  -->
@@ -58,34 +70,35 @@
                             de confianza en temas de comunicación estratégica.</p>
             </div>
         </div>
-        
-        <img src="imágenes/Polux - Angeles de Manga.jpg" alt="" class="six">
-        <img src="imágenes/Polux - David & ElDorado_2.jpg" alt="" class="seven">
-        <img src="imágenes/Kola Polux.jpg" alt="" class="eight">
-        <img src="imágenes/Polux - Columnas.jpg" alt="" class="nine">
-
-        <div class="ten">
-            <img src="imágenes/Contactanos.jpg" alt="" id="cimagen">
-            <div id="contacto"> 
-            <form action="#" method="POST">
-                    <input class=nombre type="text" name="Nombre" placeholder="Nombre">
-                    <input class=nombre type="text" name="Apellido" placeholder="Apellido">
-                    <input class=nombre type="email" name="email" id="" placeholder="Correo electrónico"> 
-                    <input class="message" type="text" placeholder="Tu mensaje...">
-                    <input class=nombre type="submit" name="Enviar" id="enviar">
-
-                    <div>
-                            <p>Tel. (+57) 310 728 34 78</p>    
-                            <p>Marbella Cra. 2a#48-04 Int. 16-03</p>    
-                            <p>Cartagena de Indias-Colombia</p>               
-                         </div>
-                         
-                </form>  
-
-            </div>
-
+        <div class="grid-item six">
+            <!-- <img src="imágenes/Polux - Angeles de Manga.jpg" alt=""> -->
         </div>
+        <div class="grid-item seven">
+            <!-- <img src="imágenes/Polux - David & ElDorado_2.jpg" alt=""> -->
+        </div>
+        <div class="grid-item eight">
+            <!-- <img src="imágenes/Kola Polux.jpg" alt=""> -->
+        </div>
+        <div class="grid-item nine">
+            <!-- <img src="imágenes/Polux - Columnas.jpg" alt=""> -->
+        </div>
+        <div class="grid-item ten">
+                <img src="imágenes/Contactanos.jpg" alt="" id="cimagen">
+                <div id="contacto"> 
+                <form action="enviar.php" method="POST">
+                        <input class="casillero nombre" type="text" name="nombre" placeholder="Nombre" required>
+                        <input class="casillero apellido" type="text" name="apellido" placeholder="Apellido" required>
+                        <input class="casillero email" type="email" name="email" id="" placeholder="Correo electrónico" required> 
+                        <input class="message" type="text" placeholder="Tu mensaje..." name="mensaje" required>
+                        <input class="enviar" type="submit" name="Enviar" id="enviar">
 
+                        <div>
+                                <p>Tel. (+57) 310 728 34 78</p>    
+                                <p>Marbella Cra. 2a#48-04 Int. 16-03</p>    
+                                <p>Cartagena de Indias-Colombia</p>               
+                        </div> 
+                    </form>  
+        </div>         
     </main>
 
     <!-- <aside>
