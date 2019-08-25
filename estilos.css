@@ -214,9 +214,9 @@ main {
     font-family: 'Courier New', Courier, monospace;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.25fr 2fr 1fr 1fr);
+    grid-template-rows: 0.25fr 1fr 2fr 1fr);
     grid-gap: 15px;
-    grid-template-areas: "nombre email email"
+    grid-template-areas: "nombre apellido email"
                          "mensaje mensaje texto"
                          "mensaje mensaje texto"
                          "mensaje mensaje enviar"
@@ -224,33 +224,45 @@ main {
 
 .ten .message {
     grid-area: mensaje;
-    height: 150px;
-    flex-grow: 6;
+    padding-left: 5px;
+    padding-top: 5px;
+    text-align: left;
+    border: none;
 }
 
 .ten .casillero{
     height: 25px;
+    border:none;
+    padding-left: 5px;
+    text-align: left; 
 }
 
 .ten .nombre{
-    grid-area: nombre;
+    grid-area: nombre;  
+}
+
+.ten .apellido {
+    grid-area: apellido;
 }
 
 .ten. .email{
     grid-area: email;
 }
 
-.ten .message {
-    text-align: start;
+.ten div {
+    grid-area: texto;
+    padding-top:15px;
 }
 
-.ten p {
-    grid-area: texto;
+.ten p{
     font-family: 'Courier New', Courier, monospace;
 }
 
 .ten .enviar {
+    grid-area: enviar;
+    height: 30px;
     text-transform: uppercase;
+    font-size: 15px;
 }
 
 .ten .enviar:hover{
@@ -258,6 +270,14 @@ main {
     background-color:red;
     cursor: pointer;
 }
+
+.casillero:focus{
+    box-shadow: 0 0 7px #719ECE;
+    }
+
+textarea:focus{
+    box-shadow: 0 0 7px #719ECE;
+    }
 
 /* aside{
     grid-area: aside;

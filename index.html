@@ -15,6 +15,10 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- <script src="jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script> -->
+
 </head>
 
 <body>
@@ -88,8 +92,8 @@
                 <form action="enviar.php" method="POST">
                         <input class="casillero nombre" type="text" name="nombre" placeholder="Nombre" required>
                         <input class="casillero apellido" type="text" name="apellido" placeholder="Apellido" required>
-                        <input class="casillero email" type="email" name="email" id="" placeholder="Correo electrónico" required> 
-                        <input class="message" type="text" placeholder="Tu mensaje..." name="mensaje" required>
+                        <input class="casillero email" type="email" name="email" id="email" placeholder="Correo electrónico" required> 
+                        <textarea name="mensaje" class="message" placeholder="Tu mensaje..." cols="30" rows="10" required></textarea>
                         <input class="enviar" type="submit" name="Enviar" id="enviar">
 
                         <div>
